@@ -5,8 +5,4 @@ go:
 env:
   - GO111MODULE=on
 
-before_install: go mod vendor
-
 install: true
-
-script: go test -v -mod=vendor ./...

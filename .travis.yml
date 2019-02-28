@@ -4,8 +4,7 @@ go:
   - 1.11.x
 
 before_install:
-  - go get -v golang.org/x/lint/golint
+  - env GO111MODULE=on go get -v golang.org/x/lint/golint
 
 script:
-  - export GO111MODULE=on
-  - go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup
+  - env GO111MODULE=on go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup

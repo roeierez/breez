@@ -2,6 +2,10 @@ language: go
 
 go:
   - 1.11.x
+env:
+  - GO111MODULE=on
+
+install: true
 
 script:
-  - env GO111MODULE=on go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup
+  - go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup

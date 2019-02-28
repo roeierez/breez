@@ -5,6 +5,7 @@ go:
 
 before_install:
   - go get -v golang.org/x/lint/golint
+  - go mod vendor
 
 script:
   - go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup

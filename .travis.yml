@@ -3,8 +3,5 @@ language: go
 go:
   - 1.11.x
 
-before_install:
-  - env GO111MODULE=on go get -v golang.org/x/lint/golint
-
 script:
   - env GO111MODULE=on go test -cover github.com/breez/breez/db github.com/breez/breez/doubleratchet github.com/breez/breez/backup
